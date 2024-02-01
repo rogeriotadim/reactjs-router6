@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { SyntheticEvent } from 'react';
 import './App.css'
+import Button from './components/generics/Button'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const handleEvent = (e: SyntheticEvent) => {
+        console.log(e);
+    }
 
   return (
     <>
-        <h1>Fala meu!!!</h1>
-        <p>Emmet acho q foi</p> 
+        <h1 className='h1'>Fala meu!!!</h1>
+        <p>Emmet acho q foi</p>
+        <Button text='Clique aqui' onClick={handleEvent}></Button>
     </>
   )
 }
